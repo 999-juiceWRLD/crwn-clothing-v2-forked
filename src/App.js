@@ -1,9 +1,12 @@
-import CategoryMenu from "./components/category-menu/CategoryMenu.component.jsx";
-import { categories } from "./categories.js";
+import Home from "./routes/home/home.component";
+import { Routes, Route } from "react-router-dom";
+
 
 const App = () => {
   return (
-    <CategoryMenu categories={categories}/>
+    <Routes>
+      <Route path="/home" element={<Home />} />
+    </Routes>
   );
 }
 
