@@ -5,7 +5,7 @@ import Shop from "./shop/shop.component.jsx";
 const App = () => {
   return (
     <Routes>
-      <Route path="/home/*" element={<Home />}>
+      <Route path="/home" element={<Home />}>
         <Route path="shop" element={<Shop/>}/>
       </Route>
     </Routes>
