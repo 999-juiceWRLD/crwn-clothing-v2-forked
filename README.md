@@ -7,3 +7,16 @@ Title says it all. Created a new folder called `shop` and a component `shop.comp
 - The way we handle this is, we actually have to go into the parent level component `<Home />`, and tell where exactly `react-router-dom` to render this nested matching element `/home/shop/`.
 
 - The component in `react-router-dom` used to handle this situation is called `Outlet`.
+
+- Inside the `<Home/>` component at `home.component.jsx`, add
+
+```js
+    return (
+            <div>
+                <Outlet />
+                <CategoryMenu categories={categories}/>
+            </div>
+        );
+```
+
+So, the `<Shop />` component will render before `<CategoryMenu />`, in contrast, if we put `<Outlet />` after `<CategoryMenu />`, then the `<Shop />` component will render later.
