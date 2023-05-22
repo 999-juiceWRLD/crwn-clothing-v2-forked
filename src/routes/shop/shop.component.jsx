@@ -1,5 +1,4 @@
 import React from "react";
-import "bootstrap";
 
 function Shop() {
     return (
